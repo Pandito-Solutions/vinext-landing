@@ -14,7 +14,7 @@ export function Footer() {
           <div className="flex flex-wrap gap-6">
             <Link
               href="/docs"
-              className="text-sm text-[var(--cf-text-secondary)] transition-colors hover:text-[var(--cf-primary)]"
+              className="link-underline-hover text-sm text-[var(--cf-text-secondary)] transition-colors duration-300 hover:text-[var(--cf-primary)]"
             >
               Documentation
             </Link>
@@ -22,7 +22,7 @@ export function Footer() {
               href="https://github.com/cloudflare/vinext"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-[var(--cf-text-secondary)] transition-colors hover:text-[var(--cf-primary)]"
+              className="link-underline-hover text-sm text-[var(--cf-text-secondary)] transition-colors duration-300 hover:text-[var(--cf-primary)]"
             >
               GitHub
             </a>
@@ -30,15 +30,23 @@ export function Footer() {
               href="https://blog.cloudflare.com/vinext/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-[var(--cf-text-secondary)] transition-colors hover:text-[var(--cf-primary)]"
+              className="link-underline-hover text-sm text-[var(--cf-text-secondary)] transition-colors duration-300 hover:text-[var(--cf-primary)]"
             >
               Blog
+            </a>
+            <a
+              href="https://agentskills.io/home"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-underline-hover text-sm text-[var(--cf-text-secondary)] transition-colors duration-300 hover:text-[var(--cf-primary)]"
+            >
+              Agent Skills
             </a>
             <a
               href="https://www.cloudflare.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-[var(--cf-text-secondary)] transition-colors hover:text-[var(--cf-primary)]"
+              className="link-underline-hover text-sm text-[var(--cf-text-secondary)] transition-colors duration-300 hover:text-[var(--cf-primary)]"
             >
               Cloudflare
             </a>
@@ -51,7 +59,7 @@ export function Footer() {
               href="https://pandito.io/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--cf-primary)] hover:underline"
+              className="link-underline-hover text-[var(--cf-primary)] transition-colors duration-300 hover:text-[var(--cf-primary-light)]"
             >
               Pandito
             </a> — with love

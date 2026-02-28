@@ -8,7 +8,7 @@ export default function DeploymentPage() {
         vinext deploys to Cloudflare Workers with a single command.
       </p>
 
-      <h2 className="mt-10 text-xl font-semibold text-white">
+      <h2 id="deploy-to-cloudflare-workers" className="mt-10 text-xl font-semibold text-white">
         Deploy to Cloudflare Workers
       </h2>
       <CodeBlock>
@@ -19,7 +19,7 @@ export default function DeploymentPage() {
         needed, and deploys. Use <code>--env staging</code> for staging.
       </p>
 
-      <h2 className="mt-10 text-xl font-semibold text-white">
+      <h2 id="production-caching-isr" className="mt-10 text-xl font-semibold text-white">
         Production caching (ISR)
       </h2>
       <p className="mt-2 text-[var(--cf-text-secondary)]">
@@ -32,7 +32,7 @@ import { setCacheHandler } from "next/cache";
 setCacheHandler(new KVCacheHandler(env.MY_KV_NAMESPACE));`}
       </CodeBlock>
 
-      <h2 className="mt-10 text-xl font-semibold text-white">
+      <h2 id="traffic-aware-pre-rendering" className="mt-10 text-xl font-semibold text-white">
         Traffic-aware Pre-Rendering (experimental)
       </h2>
       <p className="mt-2 text-[var(--cf-text-secondary)]">
@@ -48,7 +48,7 @@ setCacheHandler(new KVCacheHandler(env.MY_KV_NAMESPACE));`}
         with Zone.Analytics.
       </p>
 
-      <h2 className="mt-10 text-xl font-semibold text-white">
+      <h2 id="custom-vite-config-for-workers" className="mt-10 text-xl font-semibold text-white">
         Custom Vite config for Workers
       </h2>
       <p className="mt-2 text-[var(--cf-text-secondary)]">
@@ -77,7 +77,35 @@ export default defineConfig({
 });`}
       </CodeBlock>
 
-      <h2 className="mt-10 text-xl font-semibold text-white">
+      <h2 id="cloudflare-agents" className="mt-10 text-xl font-semibold text-white">
+        Cloudflare Agents
+      </h2>
+      <p className="mt-2 text-[var(--cf-text-secondary)]">
+        vinext runs entirely in workerd during both dev and deploy, so you can
+        use Cloudflare Agents (Durable Objects, AI bindings, and other
+        platform-specific APIs) without <code>getPlatformProxy</code>{" "}
+        workarounds. See the{" "}
+        <a
+          href="https://github.com/cloudflare/vinext-agents-example"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[var(--cf-primary)] hover:underline"
+        >
+          vinext-agents-example
+        </a>{" "}
+        repo and the live demo at{" "}
+        <a
+          href="https://next-agents.threepointone.workers.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[var(--cf-primary)] hover:underline"
+        >
+          next-agents.threepointone.workers.dev
+        </a>
+        .
+      </p>
+
+      <h2 id="live-examples" className="mt-10 text-xl font-semibold text-white">
         Live examples
       </h2>
       <ul className="mt-4 list-disc space-y-2 pl-6 text-[var(--cf-text-secondary)]">

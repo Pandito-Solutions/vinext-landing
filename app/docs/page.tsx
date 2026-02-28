@@ -19,8 +19,8 @@ export default function DocsPage() {
             Installation →
           </h2>
           <p className="text-sm text-[var(--cf-text-secondary)]">
-            Get started with vinext: AI-assisted migration, manual setup, or a
-            new project.
+            Get started with vinext: migrate an existing project, start from
+            scratch, or manual setup.
           </p>
         </Link>
         <Link
