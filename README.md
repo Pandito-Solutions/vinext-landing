@@ -6,6 +6,16 @@ This repository is **not** affiliated with, endorsed by, or officially maintaine
 
 ---
 
+## About vinext
+
+vinext reimplements the Next.js API on Vite — routing, SSR, React Server Components, server actions, and more. Key features include:
+
+- **Agent Skill for migration** — Works with Cursor, Claude Code, OpenCode, Codex, and other AI coding tools. Run `npx skills add cloudflare/vinext` and say "migrate this project to vinext".
+- **Cloudflare Workers deployment** — Single `vinext deploy` command, zero cold starts.
+- **94% API coverage** — Your existing Next.js code works with minimal changes.
+
+---
+
 ## From Pandito, with admiration
 
 Pandito is a small startup that has always admired Cloudflare. We've watched from the sidelines as they've built in the open — making the internet faster, safer, and more resilient for everyone. When they announced vinext, rebuilt in a week with AI, we felt that same spark of possibility: the future of software development is being written in real time.
@@ -62,6 +72,7 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Links
 
 - [vinext on GitHub](https://github.com/cloudflare/vinext)
+- [Agent Skills](https://agentskills.io/home) — AI-assisted migration for vinext
 - [How we rebuilt Next.js with AI in one week](https://blog.cloudflare.com/vinext/) (Cloudflare Blog)
 - [Cloudflare](https://www.cloudflare.com/)
 

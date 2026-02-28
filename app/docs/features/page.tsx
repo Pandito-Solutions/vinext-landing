@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function FeaturesPage() {
   return (
     <div className="prose prose-invert max-w-none">
@@ -6,7 +8,39 @@ export default function FeaturesPage() {
         ~94% of the Next.js 16 API surface has full or partial support.
       </p>
 
-      <h2 className="mt-10 text-xl font-semibold text-white">
+      <h2 id="ai-coding-tool-integration" className="mt-10 text-xl font-semibold text-white">
+        AI coding tool integration
+      </h2>
+      <p className="mt-2 text-[var(--cf-text-secondary)]">
+        vinext is designed to work with AI code development tools. An{" "}
+        <a
+          href="https://agentskills.io/home"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link-underline-hover text-[var(--cf-primary)] transition-colors hover:text-[var(--cf-primary-light)]"
+        >
+          Agent Skill
+        </a>{" "}
+        handles migration for Claude Code, OpenCode, Cursor, Codex, and dozens
+        of other tools. Install it, open your Next.js project, and say
+        &quot;migrate this project to vinext&quot; — the AI handles the rest.{" "}
+        <Link
+          href="/docs/installation#quick-start-ai-migration"
+          className="link-underline-hover text-[var(--cf-primary)] transition-colors hover:text-[var(--cf-primary-light)]"
+        >
+          See installation
+        </Link>
+        .
+      </p>
+      <p className="mt-4 text-[var(--cf-text-secondary)]">
+        If you run into issues, the vinext team recommends using your AI agent
+        to debug: open the project in Claude Code, Cursor, OpenCode, or your
+        preferred tool and ask it to figure out why the app isn&apos;t working.
+        Agents are very good at tracing through the vinext source and producing
+        fixes or clear diagnoses.
+      </p>
+
+      <h2 id="module-shims-next" className="mt-10 text-xl font-semibold text-white">
         Module shims (next/*)
       </h2>
       <p className="mt-2 text-[var(--cf-text-secondary)]">
@@ -47,7 +81,7 @@ export default function FeaturesPage() {
         </table>
       </div>
 
-      <h2 className="mt-10 text-xl font-semibold text-white">Routing</h2>
+      <h2 id="routing" className="mt-10 text-xl font-semibold text-white">Routing</h2>
       <ul className="mt-4 list-disc space-y-2 pl-6 text-[var(--cf-text-secondary)]">
         <li>File-system routing (pages/ and app/)</li>
         <li>Dynamic routes [param], catch-all [...slug]</li>
@@ -57,7 +91,7 @@ export default function FeaturesPage() {
         <li>basePath, trailingSlash</li>
       </ul>
 
-      <h2 className="mt-10 text-xl font-semibold text-white">
+      <h2 id="server-features" className="mt-10 text-xl font-semibold text-white">
         Server features
       </h2>
       <ul className="mt-4 list-disc space-y-2 pl-6 text-[var(--cf-text-secondary)]">
@@ -71,7 +105,7 @@ export default function FeaturesPage() {
         <li>generateStaticParams, getStaticProps, getServerSideProps</li>
       </ul>
 
-      <h2 className="mt-10 text-xl font-semibold text-white">
+      <h2 id="design-principles" className="mt-10 text-xl font-semibold text-white">
         Design principles
       </h2>
       <ul className="mt-4 list-disc space-y-2 pl-6 text-[var(--cf-text-secondary)]">
