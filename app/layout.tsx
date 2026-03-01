@@ -1,19 +1,19 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
+import type { Metadata } from 'next';
+import './globals.css';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 
 export const metadata: Metadata = {
-  title: "vinext — The Next.js API, reimplemented on Vite",
+  title: 'vinext — The Next.js API, reimplemented on Vite',
   description:
-    "Build faster. Ship smaller. Deploy anywhere. vinext is a drop-in replacement for Next.js built on Vite, deployable to Cloudflare Workers with a single command.",
+    'Build faster. Ship smaller. Deploy anywhere. vinext is a drop-in replacement for Next.js built on Vite, deployable to Cloudflare Workers with a single command.',
   icons: {
-    icon: "/favicon.svg",
+    icon: '/favicon.svg',
   },
   openGraph: {
-    title: "vinext — The Next.js API, reimplemented on Vite",
+    title: 'vinext — The Next.js API, reimplemented on Vite',
     description:
-      "Build faster. Ship smaller. Deploy anywhere. vinext by Cloudflare.",
+      'Build faster. Ship smaller. Deploy anywhere. vinext by Cloudflare.',
   },
 };
 

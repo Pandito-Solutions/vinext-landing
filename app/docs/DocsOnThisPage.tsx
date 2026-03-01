@@ -1,24 +1,24 @@
-"use client";
+'use client';
 
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 type Heading = { id: string; text: string; level: 2 | 3 };
 
 function collectHeadings(): Heading[] {
-  const article = document.querySelector("[data-docs-article]");
+  const article = document.querySelector('[data-docs-article]');
   if (!article) return [];
 
-  const els = article.querySelectorAll<HTMLHeadingElement>("h2[id], h3[id]");
+  const els = article.querySelectorAll<HTMLHeadingElement>('h2[id], h3[id]');
   const items: Heading[] = [];
   els.forEach((el) => {
     const id = el.id;
-    const text = el.textContent?.trim() ?? "";
+    const text = el.textContent?.trim() ?? '';
     if (id && text) {
       items.push({
         id,
         text,
-        level: el.tagName === "H2" ? 2 : 3,
+        level: el.tagName === 'H2' ? 2 : 3,
       });
     }
   });
@@ -44,8 +44,12 @@ export function DocsOnThisPage() {
     const t1 = setTimeout(run, 0);
     const t2 = setTimeout(run, 100);
 
-    const article = document.querySelector("[data-docs-article]");
-    if (!article) return () => { clearTimeout(t1); clearTimeout(t2); };
+    const article = document.querySelector('[data-docs-article]');
+    if (!article)
+      return () => {
+        clearTimeout(t1);
+        clearTimeout(t2);
+      };
 
     const observer = new MutationObserver(() => {
       const items = collectHeadings();
@@ -68,10 +72,10 @@ export function DocsOnThisPage() {
   useEffect(() => {
     if (headings.length === 0) return;
 
-    const article = document.querySelector("[data-docs-article]");
+    const article = document.querySelector('[data-docs-article]');
     if (!article) return;
 
-    const els = article.querySelectorAll<HTMLHeadingElement>("h2[id], h3[id]");
+    const els = article.querySelectorAll<HTMLHeadingElement>('h2[id], h3[id]');
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -82,7 +86,7 @@ export function DocsOnThisPage() {
         }
       },
       {
-        rootMargin: "-80px 0px -66% 0px",
+        rootMargin: '-80px 0px -66% 0px',
         threshold: 0,
       }
     );
@@ -94,10 +98,7 @@ export function DocsOnThisPage() {
   if (headings.length === 0) return null;
 
   return (
-    <aside
-      className="hidden w-48 shrink-0 lg:block"
-      aria-label="On this page"
-    >
+    <aside className="hidden w-48 shrink-0 lg:block" aria-label="On this page">
       <nav className="sticky top-24">
         <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-[var(--cf-text-secondary)]">
           On this page
@@ -106,14 +107,14 @@ export function DocsOnThisPage() {
           {headings.map(({ id, text, level }) => (
             <li
               key={id}
-              style={level === 3 ? { paddingLeft: "0.75rem" } : undefined}
+              style={level === 3 ? { paddingLeft: '0.75rem' } : undefined}
             >
               <a
                 href={`#${id}`}
                 className={`block text-sm transition-colors hover:text-[var(--cf-primary)] ${
                   activeId === id
-                    ? "text-[var(--cf-primary)] font-medium"
-                    : "text-[var(--cf-text-secondary)]"
+                    ? 'text-[var(--cf-primary)] font-medium'
+                    : 'text-[var(--cf-text-secondary)]'
                 }`}
               >
                 {text}

@@ -50,22 +50,22 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ### Installing Node 22
 
-| Tool | Command |
-|------|---------|
-| **nvm** | `nvm install 22 && nvm use 22` |
-| **fnm** | `fnm install 22 && fnm use` |
-| **Homebrew** | `brew install node@22` |
+| Tool         | Command                        |
+| ------------ | ------------------------------ |
+| **nvm**      | `nvm install 22 && nvm use 22` |
+| **fnm**      | `fnm install 22 && fnm use`    |
+| **Homebrew** | `brew install node@22`         |
 
 ---
 
 ## Scripts
 
-| Command       | Description                    |
-| ------------- | ------------------------------ |
-| `pnpm dev`    | Start dev server with HMR      |
-| `pnpm build`  | Production build               |
-| `pnpm start`  | Start production server        |
-| `pnpm deploy` | Build and deploy to Workers    |
+| Command       | Description                 |
+| ------------- | --------------------------- |
+| `pnpm dev`    | Start dev server with HMR   |
+| `pnpm build`  | Production build            |
+| `pnpm start`  | Start production server     |
+| `pnpm deploy` | Build and deploy to Workers |
 
 ---
 

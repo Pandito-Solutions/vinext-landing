@@ -1,6 +1,6 @@
-import { Hero } from "./components/Hero";
-import { FeatureCard } from "./components/FeatureCard";
-import { AnimateOnScroll } from "./components/AnimateOnScroll";
+import { Hero } from './components/Hero';
+import { FeatureCard } from './components/FeatureCard';
+import { AnimateOnScroll } from './components/AnimateOnScroll';
 
 export default function HomePage() {
   return (
@@ -20,7 +20,7 @@ export default function HomePage() {
           >
             <FeatureCard
               title="AI-assisted migration"
-              description="Agent Skill for Cursor, Claude Code, OpenCode, Codex, and others. Say &quot;migrate this project to vinext&quot; and the AI handles compatibility checks, config, and dev server."
+              description='Agent Skill for Cursor, Claude Code, OpenCode, Codex, and others. Say "migrate this project to vinext" and the AI handles compatibility checks, config, and dev server.'
               icon="🤖"
             />
             <FeatureCard
