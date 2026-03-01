@@ -1,3 +1,7 @@
+# Requires: GitHub repo Settings → Security → Code security and analysis
+# → Enable "Dependency graph" for this workflow to succeed.
+# See: https://docs.github.com/en/code-security/dependency-review/enabling-dependency-review
+
 name: Dependency Review
 
 on:
@@ -12,6 +16,7 @@ jobs:
   dependency-review:
     name: dependency-review
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
       - name: Checkout
         uses: actions/checkout@v4

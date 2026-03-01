@@ -171,6 +171,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Download dist
         uses: actions/download-artifact@v4
         with:
@@ -187,8 +190,8 @@ jobs:
           node-version: "22"
           cache: "pnpm"
 
-      - name: Install htmlhint
-        run: pnpm add -D htmlhint
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
       - name: Run htmlhint on dist HTML
         run: |

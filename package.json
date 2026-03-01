@@ -1,6 +1,8 @@
 {
   "name": "vinext-landing",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "type": "module",
   "private": true,
   "scripts": {

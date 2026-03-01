@@ -44,6 +44,12 @@ pnpm test
 pnpm build
 ```
 
+## Dependency review
+
+The `dependency-review` workflow blocks PRs that introduce HIGH/CRITICAL CVEs.
+
+**Repository maintainers:** Enable it via **Settings → Security → Code security and analysis** → turn on **Dependency graph**. Until enabled, the job runs with `continue-on-error` so it won't block PRs.
+
 ## Manual approval requirement
 
 PRs to `main` require approval from a member of the **Pandito-Solutions** organization before merge. This is enforced via the `production-approval` GitHub environment.
