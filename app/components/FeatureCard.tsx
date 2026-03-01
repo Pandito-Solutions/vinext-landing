@@ -8,7 +8,7 @@ type FeatureCardProps = {
 export function FeatureCard({
   title,
   description,
-  icon = "◆",
+  icon = '◆',
   link,
 }: FeatureCardProps) {
   const content = (
@@ -22,14 +22,14 @@ export function FeatureCard({
   );
 
   const cardClassName =
-    "group feature-card block rounded-xl border border-[var(--cf-border)] bg-[var(--cf-bg-darker)]/50 p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--cf-primary)]/50 hover:shadow-[0_0_20px_rgba(252,124,30,0.15)]";
+    'group feature-card block rounded-xl border border-[var(--cf-border)] bg-[var(--cf-bg-darker)]/50 p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--cf-primary)]/50 hover:shadow-[0_0_20px_rgba(252,124,30,0.15)]';
 
   if (link) {
     return (
       <a
         href={link}
-        target={link.startsWith("http") ? "_blank" : undefined}
-        rel={link.startsWith("http") ? "noopener noreferrer" : undefined}
+        target={link.startsWith('http') ? '_blank' : undefined}
+        rel={link.startsWith('http') ? 'noopener noreferrer' : undefined}
         className={cardClassName}
       >
         {content}

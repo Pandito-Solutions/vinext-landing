@@ -1,5 +1,4 @@
-const VINEXT_TAGS_API =
-  "https://api.github.com/repos/cloudflare/vinext/tags";
+const VINEXT_TAGS_API = 'https://api.github.com/repos/cloudflare/vinext/tags';
 
 export async function DocsVersion() {
   let version: string;
@@ -7,11 +6,11 @@ export async function DocsVersion() {
     const res = await fetch(VINEXT_TAGS_API, {
       next: { revalidate: 3600 },
     });
-    if (!res.ok) throw new Error("Failed to fetch tags");
+    if (!res.ok) throw new Error('Failed to fetch tags');
     const tags: { name: string }[] = await res.json();
-    version = tags[0]?.name ?? "Latest";
+    version = tags[0]?.name ?? 'Latest';
   } catch {
-    version = "Latest";
+    version = 'Latest';
   }
 
   return (

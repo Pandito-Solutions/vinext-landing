@@ -1,15 +1,18 @@
-import { CodeBlock } from "@/app/components/CodeBlock";
+import { CodeBlock } from '@/app/components/CodeBlock';
 
 export default function InstallationPage() {
   return (
     <div className="prose prose-invert max-w-none">
       <h1 className="mb-6 text-3xl font-bold text-white">Installation</h1>
 
-      <h2 id="quick-start-ai-migration" className="mt-10 text-xl font-semibold text-white">
+      <h2
+        id="quick-start-ai-migration"
+        className="mt-10 text-xl font-semibold text-white"
+      >
         Quick start (AI migration)
       </h2>
       <p className="mt-2 text-[var(--cf-text-secondary)]">
-        vinext includes an{" "}
+        vinext includes an{' '}
         <a
           href="https://agentskills.io/home"
           target="_blank"
@@ -17,13 +20,11 @@ export default function InstallationPage() {
           className="link-underline-hover text-[var(--cf-primary)] transition-colors hover:text-[var(--cf-primary-light)]"
         >
           Agent Skill
-        </a>{" "}
+        </a>{' '}
         that handles migration for you. It works with Claude Code, OpenCode,
         Cursor, Codex, and dozens of other AI coding tools.
       </p>
-      <CodeBlock>
-        npx skills add cloudflare/vinext
-      </CodeBlock>
+      <CodeBlock>npx skills add cloudflare/vinext</CodeBlock>
       <p className="mt-4 text-sm text-[var(--cf-text-secondary)]">
         Then open your Next.js project and tell the AI: &quot;migrate this
         project to vinext&quot;
@@ -31,21 +32,22 @@ export default function InstallationPage() {
       <div className="mt-4 rounded-lg border border-[var(--cf-border)] bg-[var(--cf-bg-darker)]/50 p-4">
         <p className="font-semibold text-white">Why use the skill?</p>
         <p className="mt-2 text-sm text-[var(--cf-text-secondary)]">
-          The skill runs compatibility checking, installs dependencies, generates
-          config, and starts the dev server. It knows what vinext supports and
-          flags anything that needs manual attention.
+          The skill runs compatibility checking, installs dependencies,
+          generates config, and starts the dev server. It knows what vinext
+          supports and flags anything that needs manual attention.
         </p>
       </div>
 
-      <h2 id="manual-installation" className="mt-10 text-xl font-semibold text-white">
+      <h2
+        id="manual-installation"
+        className="mt-10 text-xl font-semibold text-white"
+      >
         Manual installation
       </h2>
       <p className="mt-2 text-[var(--cf-text-secondary)]">
         Install vinext and replace <code>next</code> in your scripts:
       </p>
-      <CodeBlock>
-        npm install vinext
-      </CodeBlock>
+      <CodeBlock>npm install vinext</CodeBlock>
       <p className="mt-4 text-[var(--cf-text-secondary)]">
         Update <code>package.json</code> scripts:
       </p>
@@ -59,12 +61,15 @@ export default function InstallationPage() {
 }`}
       </CodeBlock>
       <p className="mt-4 text-[var(--cf-text-secondary)]">
-        vinext auto-detects your <code>app/</code> or <code>pages/</code>{" "}
-        directory and <code>next.config.js</code>. No vite.config.ts required for
-        basic usage.
+        vinext auto-detects your <code>app/</code> or <code>pages/</code>{' '}
+        directory and <code>next.config.js</code>. No vite.config.ts required
+        for basic usage.
       </p>
 
-      <h2 id="migrating-an-existing-nextjs-project" className="mt-10 text-xl font-semibold text-white">
+      <h2
+        id="migrating-an-existing-nextjs-project"
+        className="mt-10 text-xl font-semibold text-white"
+      >
         Migrating an existing Next.js project
       </h2>
       <p className="mt-2 text-[var(--cf-text-secondary)]">
@@ -76,7 +81,10 @@ export default function InstallationPage() {
 npx vinext init`}
       </CodeBlock>
 
-      <h2 id="starting-a-new-project-from-scratch" className="mt-10 text-xl font-semibold text-white">
+      <h2
+        id="starting-a-new-project-from-scratch"
+        className="mt-10 text-xl font-semibold text-white"
+      >
         Starting a new project from scratch
       </h2>
       <p className="mt-2 text-[var(--cf-text-secondary)]">
@@ -85,11 +93,11 @@ npx vinext init`}
       </p>
       <ol className="mt-4 list-decimal space-y-3 pl-6 text-[var(--cf-text-secondary)]">
         <li>
-          <strong className="text-white">Scaffold:</strong> Create a new
-          Next.js project with <code>npm create next-app@latest</code>
+          <strong className="text-white">Scaffold:</strong> Create a new Next.js
+          project with <code>npm create next-app@latest</code>
         </li>
         <li>
-          <strong className="text-white">Migrate:</strong> Run{" "}
+          <strong className="text-white">Migrate:</strong> Run{' '}
           <code>npx vinext init</code> in the project directory (same as
           migrating an existing project)
         </li>
@@ -103,11 +111,14 @@ cd my-app
 npx vinext init`}
       </CodeBlock>
 
-      <h2 id="what-vinext-init-does" className="mt-10 text-xl font-semibold text-white">
+      <h2
+        id="what-vinext-init-does"
+        className="mt-10 text-xl font-semibold text-white"
+      >
         What vinext init does
       </h2>
       <p className="mt-2 text-[var(--cf-text-secondary)]">
-        Whether you&apos;re migrating an existing app or a fresh scaffold,{" "}
+        Whether you&apos;re migrating an existing app or a fresh scaffold,{' '}
         <code>vinext init</code> will:
       </p>
       <ul className="mt-4 list-disc space-y-2 pl-6 text-[var(--cf-text-secondary)]">
@@ -119,11 +130,13 @@ npx vinext init`}
         <li>Generate a minimal vite.config.ts</li>
       </ul>
       <p className="mt-4 text-[var(--cf-text-secondary)]">
-        Options: <code>--force</code> to overwrite vite.config.ts,{" "}
+        Options: <code>--force</code> to overwrite vite.config.ts,{' '}
         <code>--skip-check</code> to skip compatibility scan.
       </p>
 
-      <h2 id="cli-reference" className="mt-10 text-xl font-semibold text-white">CLI reference</h2>
+      <h2 id="cli-reference" className="mt-10 text-xl font-semibold text-white">
+        CLI reference
+      </h2>
       <div className="mt-4 overflow-x-auto">
         <table className="w-full border-collapse">
           <thead>

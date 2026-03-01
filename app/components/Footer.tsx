@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export function Footer() {
   return (
@@ -54,7 +54,7 @@ export function Footer() {
         </div>
         <div className="mt-8 border-t border-[var(--cf-border)] pt-8">
           <p className="text-sm text-[var(--cf-text-secondary)]">
-            Built with vinext by{" "}
+            Built with vinext by{' '}
             <a
               href="https://pandito.io/"
               target="_blank"
@@ -62,8 +62,8 @@ export function Footer() {
               className="link-underline-hover text-[var(--cf-primary)] transition-colors duration-300 hover:text-[var(--cf-primary-light)]"
             >
               Pandito
-            </a> — with love
-            for Cloudflare
+            </a>{' '}
+            — with love for Cloudflare
           </p>
         </div>
       </div>

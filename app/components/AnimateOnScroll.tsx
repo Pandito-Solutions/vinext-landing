@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
 
 type AnimateOnScrollProps = {
   children: React.ReactNode;
   className?: string;
-  animation?: "fade-in" | "fade-in-up";
+  animation?: 'fade-in' | 'fade-in-up';
   delay?: number;
   threshold?: number;
   rootMargin?: string;
@@ -15,11 +15,11 @@ type AnimateOnScrollProps = {
 
 export function AnimateOnScroll({
   children,
-  className = "",
-  animation = "fade-in-up",
+  className = '',
+  animation = 'fade-in-up',
   delay = 0,
   threshold = 0.1,
-  rootMargin = "0px 0px -50px 0px",
+  rootMargin = '0px 0px -50px 0px',
   staggerChildren = false,
 }: AnimateOnScrollProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -44,11 +44,11 @@ export function AnimateOnScroll({
 
   const animationClass = staggerChildren
     ? isVisible
-      ? "animate-on-scroll-visible stagger-children-visible"
-      : "animate-on-scroll-pending stagger-children-pending"
+      ? 'animate-on-scroll-visible stagger-children-visible'
+      : 'animate-on-scroll-pending stagger-children-pending'
     : isVisible
       ? `animate-on-scroll-visible animate-${animation}`
-      : "animate-on-scroll-pending";
+      : 'animate-on-scroll-pending';
 
   return (
     <div

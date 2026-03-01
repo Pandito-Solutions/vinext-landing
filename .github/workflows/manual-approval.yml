@@ -1,0 +1,26 @@
+# MANUAL SETUP REQUIRED:
+# 1. Go to GitHub repo → Settings → Environments
+# 2. Create environment: production-approval
+# 3. Add "Required reviewers" → Add team: Pandito-Solutions/maintainers
+# 4. Ensure the maintainers team exists in the Pandito-Solutions organization
+#
+# Once configured, this workflow will require a member of Pandito-Solutions to approve
+# before the job succeeds, acting as a human review gate for PRs.
+
+name: Manual Approval Gate
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  require-org-approval:
+    name: require-org-approval
+    runs-on: ubuntu-latest
+    environment: production-approval
+    steps:
+      - name: Confirm approval
+        run: echo "Deployment approved by organization reviewer"

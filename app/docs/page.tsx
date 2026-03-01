@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function DocsPage() {
   return (
@@ -27,9 +27,7 @@ export default function DocsPage() {
           href="/docs/features"
           className="block rounded-xl border border-[var(--cf-border)] bg-[var(--cf-bg-darker)] p-6 transition-all hover:border-[var(--cf-primary)]"
         >
-          <h2 className="mb-2 text-xl font-semibold text-white">
-            Features →
-          </h2>
+          <h2 className="mb-2 text-xl font-semibold text-white">Features →</h2>
           <p className="text-sm text-[var(--cf-text-secondary)]">
             API coverage, routing, server features, and design principles.
           </p>
